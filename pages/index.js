@@ -2,6 +2,19 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+
+const testMap = [
+  {
+    title: 'name'
+  },
+  {
+    title: 'name1'
+  },
+  {
+    title: 'name2'
+  },
+]
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -15,6 +28,12 @@ export default function Home() {
         <h1 className={styles.title}>
           Tom Test
         </h1>
+
+        <div>
+          {testMap.map(test => (
+            <h1>{test.title}</h1>
+          ))}
+        </div>
 
         <p className={styles.description}>
           Get started by editing{' '}
